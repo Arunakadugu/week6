@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="index::headstuff">
+    <meta charset="UTF-8"/>
+    <title th:text="${title}"></title>
+</head>
+<body>
+<div class="class1">
+<div th:replace="fragments/mainpage::navclass">Mi Bank</div></div>
+<div class="container">
+    <div th:replace="fragments/mainpage :: everydiv">return to Mi Bank</div>
+</div>
+<!--<div class="container">-->
+<footer class="footer">
+    <!--<div class="container">-->
+    <nav class="pull-left">
+        <ul>
+            <li><div class="social-area pull-right">
+                <a class="btn btn-social btn-facebook btn-simple"></a></div>
+
+                <a href="/login">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="/deposit">
+                    Deposit
+                </a>
+            </li>
+            <li>
+                <a href="/withdraw">
+                    Withdraw
+                </a>
+            </li>
+            <li>
+                <a href="/transactionDetails">
+                    Transaction Details
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="social-area pull-right">
+        <a class="btn btn-social btn-facebook btn-simple">
+            <i class="fa fa-facebook-square"></i>
+        </a>
+        <a class="btn btn-social btn-twitter btn-simple">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a class="btn btn-social btn-pinterest btn-simple">
+            <i class="fa fa-pinterest"></i>
+        </a>
+    </div>
+    <div class="copyright">
+        &copy; 2017 <a href="#">Mi Bank</a>, makes me rich
+    </div>
+    <!--</div>-->
+</footer>
+<!--</div>-->
+
+</body>
+</html>

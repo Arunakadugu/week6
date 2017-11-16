@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+            src="http://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+
+    <title>Bank Form</title>
+
+</head>
+<body>
+<h1> Mi Bank Corp,</h1>
+<br />
+<div class="container">
+
+    <div th:fragment="navbar" class="navbar  navbar-light bg-faded">
+        <div class="navbar-brand">
+
+            <a class="navbar brand" href="/login"></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class=""><a href="#"></a></li>
+                    <li class=""><a href="#"></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <form action="#" th:action="@{/process}" th:object="${login}" method="post">
+        <input type="hidden" th:field="*{id}" />
+
+        <p class="col-md-2"></p><label class="col-md-4"> User Name:</label> <input type="text" th:field="*{name}" />
+        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"> </span> <br /><br />
+
+        <p class="col-md-2"></p><label class="col-md-4">Password:</label> <input type="Text" th:field="*{password}" />
+        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"> </span> <br /> <br />
+
+        <!--<p class="col-md-2"></p><label class="col-md-4">Account Number :</label> <input type="number" th:field="*{accountnumber}" />-->
+        <!--<span th:if="${#fields.hasErrors('accountnumber')}" th:errors="*{accountnumber}"> </span> <br /><br />-->
+
+        <!--<p class="col-md-2"></p><label class="col-md-4">Deposit :</label> <input type="number" th:field="*{deposit}" />-->
+        <!--<span th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"> </span> <br /><br />-->
+
+        <!--<p class="col-md-2"></p><label class="col-md-4">Transaction Details </label> <input type="text" th:field="*{transactiondetails}" />-->
+        <!--<span th:if="${#fields.hasErrors('color')}" th:errors="*{color}"> </span> <br /><br />-->
+
+        <!--<p class="col-md-2"></p><label class="col-md-4">Withdraw (if any):</label> <input type="number" th:field="*{withdraw}" />-->
+        <!--<span th:if="${#fields.hasErrors('specialFeatures')}" th:errors="*{specialFeatures}"> </span> <br /><br />-->
+
+        <!--<p class="col-md-2"></p><label class="col-md-4">Phone Number:</label> <input type="text" th:field="*{phoneNumber}" />-->
+        <!--<span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"> </span> <br /><br />-->
+
+
+        <div class="col-md-12">
+            <p class="col-md-6"></p><input type="submit" value="Submit" />
+        </div>
+
+
+    </form>
+    <div class="vl"></div>
+</div>
+<script
+        src="http://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+</body>
+</html>
